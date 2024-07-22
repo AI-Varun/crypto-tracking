@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crypto Data Frontend
 
-## Getting Started
+This frontend application displays real-time data for cryptocurrencies or stocks in a dynamic table. It uses Next.js, TypeScript, and Redux for state management.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Displays the most recent 20 entries of real-time data for a selected stock or cryptocurrency.
+- Updates the table dynamically with new data.
+- Includes a modal to change the stock or cryptocurrency.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- TypeScript
+- Redux
+- Axios
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setup
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/AI-Varun/crypto-tracking.git
+    cd client
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+4. **Start the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Components
+
+- **CryptoSelector.tsx**
+  - Allows users to select or add a new symbol. Opens a modal with an input field for custom symbols.
+
+- **Modal.tsx**
+  - A reusable modal component for displaying the `CryptoSelector`.
+
+- **PriceTable.tsx**
+  - Displays real-time data in a table format.
+
+## Redux Setup
+
+- **Store Configuration**
+  - State is managed using Redux and stored in localStorage.
+
+- **Actions and Selectors**
+  - Actions: `fetchCryptoData`
+  - Selectors: `selectCryptoState`
+
+## Usage
+
+- Navigate to the home page to view the table of real-time data.
+- Click the "Change Crypto" button to open the modal and select or add a new symbol.
