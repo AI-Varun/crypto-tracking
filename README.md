@@ -86,7 +86,3 @@ This project consists of a backend service and a frontend application that work 
 - **Actions and Selectors**
   - Actions: `fetchCryptoData`
   - Selectors: `selectCryptoState`
-
-## License
-
-This project is licensed under the MIT License.
