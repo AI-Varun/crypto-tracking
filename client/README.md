@@ -1,4 +1,4 @@
-# Crypto Data Frontend
+# Crypto Tracking Frontend
 
 This frontend application displays real-time data for cryptocurrencies or stocks in a dynamic table. It uses Next.js, TypeScript, and Redux for state management.
 
